@@ -1,0 +1,42 @@
+import numpy as np
+
+# Step_Search function with print statements
+def Step_Search(lb, ub, f):
+    nr = 5
+    grid_size = 10
+    
+    G = np.linspace(lb, ub, grid_size)
+    x_min = G[0]
+    f_min = f(G[0])
+    
+    print(f"Initial grid: {G}")
+    print(f"Initial x_min: {x_min}, f_min: {f_min}")
+    
+    for r in range(nr):
+        print(f"\nIteration {r + 1}")
+        
+        for i in range(len(G)):
+            fvalue = f(G[i])
+            if fvalue <= f_min:
+                f_min = fvalue
+                x_min = G[i]
+            print(f"G[{i}]: {G[i]}, f(G[{i}]): {fvalue}, x_min: {x_min}, f_min: {f_min}")
+        
+        grid_size *= 2
+        G = np.linspace(lb, x_min, grid_size)
+        print(f"Refined grid: {G}")
+    
+    initial_points = [x_min]
+    return initial_points
+
+# Sample quadratic function to minimize
+def sample_function(x):
+    return (x - 2) ** 2
+
+# Define the bounds for the search
+lb = 0
+ub = 5
+
+# Call the Step_Search function and print the results
+initial_points = Step_Search(lb, ub, sample_function)
+print(f"\nInitial points from Step_Search: {initial_points}")
