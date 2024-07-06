@@ -48,3 +48,9 @@ p
   font-size: 15px;
   margin-top: -5px;
 }
+
+.result-container
+{
+  font-size: 1.3rem;
+  margin: auto;
+}

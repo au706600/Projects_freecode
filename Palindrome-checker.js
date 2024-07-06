@@ -7,28 +7,42 @@ function check()
   
   if (textinput.value.length == 0)
   {
-    alert("Enter text");
+    alert("Field cannot be empty!");
     return false;
   }
   else
   {
-    return palindrome(textinput.value, btninput);
+    return showresults();
   }
 }
 
 btninput.addEventListener("click", check);
 
-function palindrome(textinput, btninput)
+function palindrome(textinput)
 {
-  if(btninput)
-  {
-    var textsplit = textinput.split("");
+    var remove = textinput.trim().replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    var textsplit = remove.split("");
 
     var reversesplit = textsplit.reverse();
 
     var joinreverse = reversesplit.join("");
 
-    return textinput == joinreverse; 
-    
-  }
+    if(remove === joinreverse)
+    {
+        return `${textinput} is a Palindrome`;
+        //alert("Palindrome");
+    }
+
+    else
+    {
+        return `${textinput} is not a Palindrome`;
+        //alert("Not a Palindrome");
+    }
+}
+
+
+function showresults()
+{
+    var result = document.getElementById("result")
+    result.innerHTML = palindrome(textinput.value);
 }
