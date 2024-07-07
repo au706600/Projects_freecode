@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Palindrome Checker</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/Palindrome-checker.css"/>
+            <style>
+                menu
+                {
+                    background: linear-gradient(#000099, #a5d3ff);
+                   /* padding-left: 200px; */
+                   /* margin:20px; */
+                    text-align: left;
+                    font-size: 20px;
+                    color: #ffffff;
+                    margin-right: 20%;
+                    margin-left: 35%;
+                    line-height: 1.6;
+                    font-size: 18px;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 15%;
+                    background-color: #f1f1f1;
+                    height: 100%; /* Full height */
+                    position: fixed; /* Make it stick, even on scroll */
+                    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+                }
+            </style>
+            <menu>
+                <li><a href="palindrome-checker.html"> Palindrome-checker</a></li>
+                <li><a href="Support.html">Technical Support</a></li>
+            </menu>
+    </head>
+
+    <body>
+        <h1>Palindrome-checker</h1>
+        <section>
+            <div class="result-container">
+                <h2>Enter in text to check for a palindrome: </h2>
+                <input id="text-input" required>
+                <button id="check-btn">Check</button>
+                <p id="result"></p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                A palindrome is a word or sentence that's spelled the same way both forward and backward, 
+                ignoring punctuation, case, and spacing.
+            </div>
+        </section>
+        <script src = "./Palindrome-checker.js"></script>
+    </body>
+</html>
