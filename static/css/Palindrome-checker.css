@@ -39,6 +39,8 @@ li a {
   color: white;
   padding: 18px 26px;
   text-decoration: none;
+  font-size: 15px;
+
 }
 li a:hover {
   background-color: #7c8281;
@@ -67,6 +69,7 @@ p
 {
   font-size: 15px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .result-container
