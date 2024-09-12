@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Roman-Numeral-Converter</title>
-        <link rel="stylesheet" type="text/css" href="../static/css/Roman-Numeral-Converter.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/Shopping-Cart.css">
         <style>
             menu
             {
@@ -36,23 +37,23 @@
             <li><a href="Support.html">Technical Support</a></li>
         </menu>
     </head>
-    <body>
-        <h1>Roman-Numeral-Converter</h1>
-        <div class="result-container">
-            <h2>Enter a number</h2>
-            <input 
-            type="number"
-            name="number input"
-            id="number"
-            class="number"
-            required/>
-            <button id="convert-btn">Convert</button>
-        </div>
 
-    
-        <div>
-            <p id="output" class="hidden"></p>
-        </div>
-        <script src="./Roman-Numeral-Converter.js"></script>
+    <body>
+        <header>
+            <h1 class="title">Desserts Page</h1>
+        </header>
+        <main>
+            <button id="cart-btn" type="button" class="btn"><span id="show-hide-cart"> Show</span> Cart</button>
+            <div id="cart-container">
+                <button class="btn" id = "clear-cart-btn"> Clear Cart</button>
+                <div id="products-container"></div>
+                <p> Total number of items: <span id="total-items">0</span></p>
+                <p> Subtotal: <span id="subtotal"> 0</span></p>
+                <p>Taxes: <span id="taxes">0</span></p>
+                <p>Total: <span id="total">0</span></p>
+            </div>
+            <div id="dessert-card-container"></div>
+        </main>
+        <script src="./Shopping-Cart.js"></script>
     </body>
 </html>

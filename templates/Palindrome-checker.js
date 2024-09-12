@@ -20,7 +20,7 @@ btninput.addEventListener("click", check);
 
 function palindrome(textinput)
 {
-    var remove = textinput.trim().replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    var remove = textinput.trim().replace(/[^A-Za-z0-9]/g, '').toLowerCase(); 
     var textsplit = remove.split("");
 
     var reversesplit = textsplit.reverse();
@@ -46,3 +46,4 @@ function showresults()
     var result = document.getElementById("result")
     result.innerHTML = palindrome(textinput.value);
 }
+

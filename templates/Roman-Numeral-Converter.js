@@ -4,6 +4,7 @@ const buttoninput = document.getElementById("convert-btn");
 
 var result = document.getElementById("output");
 
+
 function checkinput()
 {
     if (numberinput.value.length == 0)
