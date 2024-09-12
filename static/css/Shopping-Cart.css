@@ -40,6 +40,30 @@ body {
     background-color: var(--dark-grey);
 }
 
+
+.menu-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button
+{
+    background-color: #3b3b4f;
+    border: none;
+    border-radius: 50%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    margin: 4px 2px;
+    display: inline-block;
+    font-size: 16px;
+    color: #f5f6f7;
+}
+
+
+
 .title
 {
     color: var(--light-grey);
