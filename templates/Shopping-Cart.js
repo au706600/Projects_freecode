@@ -9,6 +9,33 @@ const cartTaxes = document.getElementById("taxes");
 const cartTotal = document.getElementById("total");
 const showHideCartSpan = document.getElementById("show-hide-cart");
 let isCartShowing = false;
+const menuButton = document.querySelector(".Button"); // Select the Menu button
+const menu = document.getElementById("menu"); // Select the menu element
+let isMenuOpen = false; // Variable to track the menu state
+
+// Function to toggle the menu as a way to control the state of the menu
+function toggleMenu(e)
+{
+  e.stopPropagation(); 
+  isMenuOpen = !isMenuOpen;
+  menu.style.display = isMenuOpen ? "block" : "none";
+}
+
+// Function to hide the menu
+function hidMenu()
+{
+  if(menuOpen)
+  {
+    menu.style.display = "none";
+    isMenuOpen = false;
+  }
+}
+
+// Add the event listeners to the menu button and the document
+menuButton.addEventListener("click", toggleMenu);
+document.addEventListener("click", hidMenu);
+menu.addEventListener("click", (e) => {e.stopPropagation();});
+
 
 const products = [
   
