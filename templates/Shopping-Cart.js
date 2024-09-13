@@ -18,7 +18,7 @@ function toggleMenu(e)
 {
   e.stopPropagation(); 
   isMenuOpen = !isMenuOpen;
-  menu.style.display = isMenuOpen ? "block" : "none";
+  menu.style.display = isMenuOpen ? "block" : "none"; 
 }
 
 // Function to hide the menu
