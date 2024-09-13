@@ -11,6 +11,7 @@ const showHideCartSpan = document.getElementById("show-hide-cart");
 let isCartShowing = false;
 const menuButton = document.querySelector(".Button"); // Select the Menu button
 const menu = document.getElementById("menu"); // Select the menu element
+const openMenu = document.getElementById("menu-appears");
 let isMenuOpen = false; // Variable to track the menu state
 
 // Function to toggle the menu as a way to control the state of the menu
@@ -21,10 +22,19 @@ function toggleMenu(e)
   menu.style.display = isMenuOpen ? "block" : "none"; 
 }
 
+function OpenMenu()
+{
+  if(!isMenuOpen)
+  {
+    menu.style.display = "block";
+    isMenuOpen = true;
+  }
+}
+
 // Function to hide the menu
 function hidMenu()
 {
-  if(menuOpen)
+  if(isMenuOpen)
   {
     menu.style.display = "none";
     isMenuOpen = false;
@@ -35,6 +45,8 @@ function hidMenu()
 menuButton.addEventListener("click", toggleMenu);
 document.addEventListener("click", hidMenu);
 menu.addEventListener("click", (e) => {e.stopPropagation();});
+openMenu.addEventListener("click", toggleMenu);
+document.addEventListener("click", OpenMenu);
 
 
 const products = [

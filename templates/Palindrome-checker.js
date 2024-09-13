@@ -2,6 +2,42 @@ const textinput = document.getElementById("text-input");
 
 const btninput = document.getElementById("check-btn");
 
+const menuOpen = document.getElementById("Menu-Open");
+const closeMenu = document.querySelector(".Button");
+const menu = document.getElementById("menu");
+var isMenuOpen = false;
+
+function toggleMenu(e)
+{
+  e.stopPropagation();
+  isMenuOpen = !isMenuOpen;
+  menu.style.display = isMenuOpen ? "block" : "none";
+}
+
+function OpenMenu()
+{
+  if(!isMenuOpen)
+  {
+    menu.style.display = "block";
+    isMenuOpen = true;
+  }
+}
+
+function hidMenu()
+{
+  if(isMenuOpen)
+  {
+    menu.style.display = "none";
+    isMenuOpen = false;
+  }
+}
+
+closeMenu.addEventListener("click", toggleMenu);
+document.addEventListener("click", hidMenu);
+menu.addEventListener("click", (e) => {e.stopPropagation();});
+menuOpen.addEventListener("click", toggleMenu);
+document.addEventListener("click", OpenMenu);
+
 function check()
 {
   
