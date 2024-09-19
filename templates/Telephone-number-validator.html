@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0"/>
+        <title>Telephone-Number-Validator</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/Telephone-Number-Validator.css">
+        <style>
+            menu
+            {
+                background: linear-gradient(#C25283, #f2b8b8);
+                text-align: left;
+                color: #ffffff;
+                font-size: 10px;
+                margin-left: 35%;
+                margin-right: 20%;
+                line-height: 1.3rem;
+                font-size: 10px;
+                margin-top: 0;
+                margin: 0;
+                padding: 0;
+                width: 15%;
+                height: 100%;
+                background-color: #f1f1f1;
+                list-style-type: none;
+                position: fixed;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <menu id="menu">
+            <nav class="menu-wrapper">
+                <button class="Menu-btn">Click Here</button>
+            </nav>
+            <li><a href="palindrome-checker.html">Palindrome-checker</a></li>
+            <li><a href="Roman-Numeral-Converter.html">Roman-Numeral-Converter</a></li>
+            <li><a href="Shopping-Cart.html">Shopping-Cart</a></li>
+            <li><a href="Telephone-number-validator.html">Telephone Number Validator</a></li>
+            <li><a href="Support.html">Technical Support</a></li>
+        </menu>
+        <h1>Telephone Number Validator</h1>
+        <div id="results-div" required>
+            <h2>Enter a phone number</h2>
+            <input id="user-input" type="number">
+            <button id="check-btn">Check</button>
+            <button id="clear-btn">Clear</button>   
+        </div>
+        <section>
+            <p id="results-div" class="hidden"></p>
+        </section>
+        <script src="./Telephone-number-validator.js"></script>
+    </body>
+</html>

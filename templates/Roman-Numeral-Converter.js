@@ -89,8 +89,8 @@ function numToRoman(numberinput)
 
 }
 
-function showresults()
+function showresults() 
 {
     result.innerHTML = numToRoman(numberinput.value);
-    result.classList.remove("hidden");
+    result.classList.remove("hidden"); 
 }
