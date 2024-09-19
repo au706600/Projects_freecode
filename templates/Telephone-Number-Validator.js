@@ -7,7 +7,7 @@ const MenuClose = document.querySelector(".Menu-btn");
 const Menu = document.getElementById("menu");
 var isMenuOpen = false;
 
-function toggleMenu(e)
+function toggleMenu(e) 
 {
     e.stopPropagation();
     isMenuOpen = !isMenuOpen;
@@ -26,34 +26,34 @@ function closemenu()
 
 function CheckInput()
 {
+    const regex = /^1?\s?(\([0-9]{3}\)|[0-9]{3})[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
+
     if (userInput.value.length == 0)
     {
         alert("Please provide a phone number");
     }
-
-    const regex = /^1?\s?(\(?[0-9]{3}\)?)[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
-    result.innerHTML = regex.test(userInput.value);
-    if(result.innerHTML == true)
+    //result.innerHTML = regex.test(userInput.value);
+    else if(regex.test(userInput.value))
     {
         result.classList.remove("hidden");
-        return `Valid US number: ${userInput.value}`;
+        result.innerHTML = `Valid US number: ${userInput.value}`;
     }
     else
     {
-        result.classList.remove("hidden");
-        return `Invalid US number: ${userInput.value}`;
+        result.classList.remove("hidden"); 
+        result.innerHTML = `Invalid US number: ${userInput.value}`;
     }
     //result.classList.remove("hidden");
 }
 
-/*
-function showResults()
-{
 
-}
-*/
+
 
 MenuClose.addEventListener("click", toggleMenu);
 document.addEventListener("click", closemenu);
 Menu.addEventListener("click", (e) => {e.stopPropagation();});
 checkBtn.addEventListener("click", CheckInput);
+clearBtn.addEventListener("click",() => {
+    userInput.value = "";
+    result.innerHTML = "";
+});

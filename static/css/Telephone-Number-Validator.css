@@ -61,6 +61,16 @@ div
     height: 200px;
 }
 
+#results-div
+{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+
+}
+
 #check-btn
 {
     margin-top: -50px;
